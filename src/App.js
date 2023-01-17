@@ -3,9 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./routes/home/home.component";
 import Navigation from "./components/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
-function Shop() {
-  return <h1>I'm the shop</h1>;
-}
+import Shop from "./components/shop/shop.component";
 
 function App() {
   return (
