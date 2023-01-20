@@ -6,6 +6,7 @@ import {
 import FormInput from "../form-input/form-input.component";
 import "./sign-up-form.styles.scss";
 import Button from "../button/button.component";
+import { BUTTON_TYPE_CLASSES } from "../button/button.component";
 const defaultFormFields = {
   displayName: "",
   email: "",
@@ -87,7 +88,7 @@ const SignupForm = () => {
           value={confirmPassword}
         />
 
-        <Button type="submit" buttonType="inverted">
+        <Button type="submit" buttonType={BUTTON_TYPE_CLASSES.inverted}>
           Sign up
         </Button>
       </form>
