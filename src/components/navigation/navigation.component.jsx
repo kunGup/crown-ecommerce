@@ -1,8 +1,8 @@
-import {Fragment} from 'react'
+import {Fragment,useContext} from 'react'
 import { Link } from 'react-router-dom';
 import { Outlet } from "react-router-dom/dist";
-import { useContext } from 'react';
-import { UserContext } from '../../context/user.context';
+import { useSelector } from 'react-redux';
+import { selectCurrentUser } from "../../store/user/user.selector";
 import { CartContext } from '../../context/cart.context';
 import {ReactComponent as CrwnLogo} from '../../assets/crown.svg'
 import './navigation.styles.jsx'
@@ -17,10 +17,10 @@ import {
 } from "./navigation.styles";
 function Navigation() {
   const { isCartOpen } = useContext(CartContext);
-  const {currentUser,setCurrentUser} = useContext(UserContext)
+  const currentUser = useSelector(selectCurrentUser)
+
   const signOutHandler = async () => {
     await signOutUser()
-    setCurrentUser(null)
   }
   return (
     <Fragment>
