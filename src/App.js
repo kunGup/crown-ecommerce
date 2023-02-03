@@ -1,13 +1,12 @@
 import React,{useEffect} from "react";
-import { onAuthStateChanged } from "firebase/auth";
+
 import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
 } from "./utils/firebase/firebase.utils";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./store/user/user.action";
-import { selectCurrentUser } from "./store/user/user.selector";
 import Home from "./routes/home/home.component";
 import Navigation from "./components/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
